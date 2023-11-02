@@ -66,8 +66,8 @@
 ![Flask](https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white) ![LangChain](https://img.shields.io/badge/langchain-000000.svg?&style=for-the-badge&logo=langchain&logoColor=white) ![springboot](https://img.shields.io/badge/springboot-6DB33F.svg?&style=for-the-badge&logo=springboot&logoColor=white) ![springsecurity](https://img.shields.io/badge/springsecurity-6DB33F.svg?&style=for-the-badge&logo=springsecurity&logoColor=white) ![jsonwebtokens](https://img.shields.io/badge/jsonwebtokens-000000.svg?&style=for-the-badge&logo=jsonwebtokens&logoColor=white) ![JPA](https://img.shields.io/badge/JPA-6DB33F.svg?&style=for-the-badge&logo=JPA&logoColor=white)
 
 ### DB
-
 ![mysql](https://img.shields.io/badge/mysql-4479A1.svg?&style=for-the-badge&logo=mysql&logoColor=white)
+
 
 ### CI/CD
 
@@ -82,8 +82,72 @@
 
 ## 🗃️ ERD
 
+* MySQL
 ![ERD](exec/assets/image1.png)
 
+* Elasticsearch Documents
+```
+{
+  "mappings": {
+    "properties": {
+      "articleNo": { "type": "long"},
+      "complexNo": { "type": "long", "index": false },
+      "hscpNo": { "type": "float", "index": false },
+      "ptpNo": { "type": "float", "index": false },
+      "tradeTypeCode": { "type": "keyword", "index": false },
+      "complexName": {
+        "type": "text",
+        "analyzer": "custom_nori_analyzer"
+      },
+      "sidoName": { "type": "text" },
+      "guName": { "type": "text" },
+      "dongName": { "type": "text" },
+      "address": {
+        "type": "text",
+        "analyzer": "custom_nori_analyzer"
+      },
+      "latitude": { "type": "float", "index": false },
+      "longitude": { "type": "float", "index": false },
+      "roomType": { "type": "keyword" },
+      "realEstateTypeName": { "type": "keyword" },
+      "floorInfo": { "type": "text", "index": false },
+      "buildingName": { "type": "text" },
+      "dealOrWarrantPrc": { "type": "text", "index": false },
+      "rentPrc": { "type": "text", "index": false},
+      "supplyArea": { "type": "float", "index": false },
+      "exclusiveArea": { "type": "float" },
+      "exclusiveRate": { "type": "integer", "index": false },
+      "direction": { "type": "text", "index": false },
+      "tagList": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "description": { "type": "text", "index": false },
+      "realtorName": { "type": "text", "index": false },
+      "realtorAddress": { "type": "text", "index": false },
+      "realtorcellPhoneNo": { "type": "text", "index": false },
+      "articleConfirmYmd": { "type": "date", "index": false },
+      "roomCnt": { "type": "float", "index": false },
+      "bathroomCnt": { "type": "text", "index": false },
+      "maintenanceFee": { "type": "float" },
+      "lawUsage": { "type": "keyword", "index": false },
+      "approvalDate": { "type": "text", "index": false},
+      "years_difference": {
+        "type": "float"
+      },
+      "dealOrWarrantPrc_numeric": {
+        "type": "float"
+      },
+      "rentPrc_numeric": {"type": "float"}
+    }
+  }
+}
+```
+  
 <br>
 
 <br>
